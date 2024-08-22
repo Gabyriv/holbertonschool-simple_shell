@@ -17,16 +17,16 @@ extern char **environ;
 int exec(char **arguments);
 int exist(char *pathname);
 int _putchar(char c);
-void prompt(void);
+int _prompt(const char *prompt, unsigned int size);
 int _strlen(const char *string);
 char *_strdup(char *str);
 int _strcmp(char *str1, char *str2);
 int check_built(char **args, int exit_stat);
 char extra_command(char *dir_path, char *command);
 int _path(char **args);
-char *_gentenv(char *global_var);
+char *_getenv(char *global_var);
 int not_found(char **arguments, int counter);
-void _free(char *entry);
+void mem_free(char *entry);
 int get_args(char *entry, char **arguments);
-
+int print_numbers(int n);
 #endif

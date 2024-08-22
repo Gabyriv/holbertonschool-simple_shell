@@ -6,7 +6,7 @@
  *return: pointer to the content for a variable
  */
 
-char *_gentenv(char *global_var)
+char *_getenv(char *global_var)
 {
 	int i = 0;
 	const char c[] = "=";

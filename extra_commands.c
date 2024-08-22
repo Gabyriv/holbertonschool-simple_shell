@@ -20,19 +20,20 @@ char extra_command(char *dir_path, char *command)
 	command_path = malloc(len1 + len2 + 2);
 	if (command_path == NULL)
 		return (NULL);
-	for (a = 0; dir_path[a] != NULL; a++)
+	for (x = 0; dir_path[x] != '\0'; x++)
 	{
-		command_path[a] = dir_path[a];
+		command_path[x] = dir_path[x];
 	}
-	if (dir_path[a - 1] != '/')
+	if (dir_path[x - 1] != '/')
 	{
-		command_path[a] = '/';
-		a++;
+		command_path[x] = '/';
+		x++;
 	}
-	while (command[b] != NULL)
+	while (command[y] != '\0')
 	{
-		command_path[a +b] = command[b];
+		command_path[x +y] = command[y];
+		y++;
 	}
-	command_path[a + b] = NULL;
+	command_path[x + y] = '\0';
 	return (command_path);
 }

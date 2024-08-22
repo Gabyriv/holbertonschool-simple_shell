@@ -6,7 +6,7 @@
  *
  */
 
-void _free(char *entry)
+void mem_free(char *entry)
 {
 	if (isatty(STDIN_FILENO))
 	{

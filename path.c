@@ -13,35 +13,34 @@ int _path(char **args)
 	char *dir_path = NULL;
 	char *command_path = NULL;
 	char *test[1024];
-	int exist_stat = -1, 1 = 0;
+	int exist_stat = -1, i = 0;
 
 	global_path = _getenv("PATH");
-	if (global_path == NULL0
-			return (-1);
-			global_dup = (_stardup(global_path));
-			dir_path = strtok(global_dup, ":");
-			if (dir_path == NULL)
-			return(-1);
-			free(global_path);
-			while (exist_stat == -1 && dir_path != NULL)
-			{
-			command_path = append_command(dir_path, av[0]);
-			test[i] = command_path;
-			exist_stat = exist(test[i]);
-			dir_path = strtok(NULL, ":");
-			i++;
-			}
-			i--;
-			free(global_dup);
-			free_grid(test ,i);
-			if (exist_stat == 0)
-			{
-			av[0] = test[i];
-			return (0);
-			}
-			ele
-			{
-				free(test[i]);
-				return (-1);
-			}
+	if (global_path == NULL)
+		return (-1);
+	global_dup = (_strdup(global_path));
+	dir_path = strtok(global_dup, ":");
+	if (dir_path == NULL)
+		return(-1);
+	free(global_path);
+	while (exist_stat == -1 && dir_path != NULL)
+	{
+		command_path = extra_command(dir_path, args[0]);
+		test[i] = command_path;
+		exist_stat = exist(test[i]);
+		dir_path = strtok(NULL, ":");
+		i++;
+	}
+	i--;
+	free(global_dup);
+	if (exist_stat == 0)
+	{
+		args[0] = test[i];
+		return (0);
+	}
+	else
+	{
+		free(test[i]);
+		return (-1);
+	}
 }
