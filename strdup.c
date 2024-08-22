@@ -6,7 +6,7 @@
  *return: the pointe of the dup string
  */
 
-cahr *_stardup(char *str)
+char *_stardup(char *str)
 {
 	unsigned int a, len;
 	char *dup;
