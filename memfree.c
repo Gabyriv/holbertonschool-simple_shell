@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- *free - free the memeory when the last execution happened
+ *_free - free the memeory when the last execution happened
  *@entry: the input type by the user
  *
  */
 
-void free(char *entry)
+void _free(char *entry)
 {
 	if (isatty(STDIN_FILENO))
 	{

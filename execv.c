@@ -12,7 +12,7 @@ int exec(char **arguments)
 	int stat = 0, exe_stat = 0;
 
 	pid  = fork();
-	if (pid  == 1)
+	if (pid  == -1)
 		perror("Fail\n");
 	else if (pid == 0)
 	{

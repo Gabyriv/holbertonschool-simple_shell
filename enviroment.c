@@ -17,20 +17,20 @@ char *_gentenv(char *global_var)
 		if (environ == NULL)
 			return (NULL);
 		envdup = _strdup(environ[i]);
-				while (envdup != NULL)
-				{
-				env_tok = strtok(envdup, c);
-				if (_strcmp(env_tok, global_var) == 0
-						{
-						env_tok = strtok(NULL, c);
-						env_tok_dup = strdup(env_tok);
-						free(envdup);
-						return (env_tok_dup);
-						}
-						i++;
-						free(envdup);
-						envdup = _stardup(environ[i];
-							}
-							return (NULL);
-							}
-							}
+		while (envdup != NULL)
+		{
+			env_tok = strtok(envdup, c);
+			if (_strcmp(env_tok, global_var) == 0)
+			{
+				env_tok = strtok(NULL, c);
+				env_tok_dup = strdup(env_tok);
+				free(envdup);
+				return (env_tok_dup);
+			}
+			i++;
+			free(envdup);
+			envdup = _stardup(environ[i];
+		}
+	}
+	return (NULL);
+}

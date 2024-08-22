@@ -19,7 +19,7 @@ int _args(char *entry, char *av[])
 		index++;
 		options = strtok(NULL, "\n\t\r ");
 		av[i] = options;
-		}
+	}
 	av[i] = NULL;
 	return (i);
 }
