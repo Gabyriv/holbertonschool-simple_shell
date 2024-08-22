@@ -19,9 +19,10 @@ void prompt(void);
 int _strlen(const char *string);
 char *_strdup(char *str);
 int _strcmp(char *str1, char *str2);
-
-
-
+int check_built(char **args, int exit_stat);
+char extra_command(char *dir_path, *command);
+int _path(char **args);
+char *_gentenv(char *global_var);
 
 
 
