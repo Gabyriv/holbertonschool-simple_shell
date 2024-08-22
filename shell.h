@@ -27,6 +27,6 @@ int _path(char **args);
 char *_gentenv(char *global_var);
 int not_found(char **arguments, int counter);
 void _free(char *entry);
-int _args(char *entry, char *av[])
+int get_args(char *entry, char **arguments);
 
 #endif

@@ -17,13 +17,18 @@ int check_built(char **args, int exit_stat)
 
 	while (1 < 2)
 	{
-		if (_strcmp(args[0], builtins[i] == ))
+		if (_strcmp(args[0], builtins[i]) == 0)
 			break;
 		i++;
 	}
 	if (i == 2)
 		return (-1);
-	if (_strcmp(buitlins[i], "env") == 0)
+	if (_strcmp(builtins[i], "exit") == 0)
+	{
+		free(args[0]);
+		exit(exit_stat);
+	}
+	if (_strcmp(builtins[i], "env") == 0)
 	{
 		if (environ == NULL)
 			return (0);

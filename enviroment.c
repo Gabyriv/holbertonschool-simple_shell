@@ -23,13 +23,13 @@ char *_gentenv(char *global_var)
 			if (_strcmp(env_tok, global_var) == 0)
 			{
 				env_tok = strtok(NULL, c);
-				env_tok_dup = strdup(env_tok);
+				env_tok_dup = _strdup(env_tok);
 				free(envdup);
 				return (env_tok_dup);
 			}
 			i++;
 			free(envdup);
-			envdup = _stardup(environ[i];
+			envdup = _strdup(environ[i]);
 		}
 	}
 	return (NULL);

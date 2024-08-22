@@ -7,19 +7,19 @@
  *Return: the lenght of the array
  */
 
-int _args(char *entry, char *av[])
+int get_args(char *entry, char **arguments)
 {
 	int index = 0;
 	char *options, *help = entry, *command;
 
 	command = strtok(entry, "\n\t\r ");
-	av[i] = command;
+	arguments[index] = command;
 	while (help != NULL)
 	{
 		index++;
 		options = strtok(NULL, "\n\t\r ");
-		av[i] = options;
+		arguments[index] = options;
 	}
-	av[i] = NULL;
-	return (i);
+	arguments[index] = NULL;
+	return (index);
 }
