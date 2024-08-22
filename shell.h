@@ -23,7 +23,8 @@ int check_built(char **args, int exit_stat);
 char extra_command(char *dir_path, *command);
 int _path(char **args);
 char *_gentenv(char *global_var);
-
+int not_found(char **arguments, int counter);
+void _free(char *entry);
 
 
 
