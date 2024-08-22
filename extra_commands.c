@@ -7,7 +7,7 @@
  *return: buffer
  */
 
-char extra_command(char *dir_path, char *command)
+char *extra_command(char *dir_path, char *command)
 {
 	int x, y = 0, len1, len2;
 	char *command_path = NULL;
