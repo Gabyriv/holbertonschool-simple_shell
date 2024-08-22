@@ -16,7 +16,7 @@ char *_gentenv(char *global_var)
 	{
 		if (environ == NULL)
 			return (NULL);
-		envdup = _strdup(environ[i];
+		envdup = _strdup(environ[i]);
 				while (envdup != NULL)
 				{
 				env_tok = strtok(envdup, c);
