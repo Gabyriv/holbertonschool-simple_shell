@@ -7,7 +7,7 @@
  *Return: the lenght of the array
  */
 
-int _args(char *entry, *av[])
+int _args(char *entry, char *av[])
 {
 	int index = 0;
 	char *options, *help = entry, *command;
