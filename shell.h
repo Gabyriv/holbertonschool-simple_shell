@@ -29,4 +29,6 @@ int not_found(char **arguments, int counter);
 void mem_free(char *entry);
 int get_args(char *entry, char **arguments);
 int print_numbers(int n);
+void free_grid(char **grid, int heigth);
+void execute_command(char **args, char *_path);
 #endif
