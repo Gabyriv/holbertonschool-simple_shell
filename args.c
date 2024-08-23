@@ -18,6 +18,7 @@ int get_args(char *entry, char **arguments)
 	{
 		index++;
 		options = strtok(NULL, "\n\t\r ");
+		help = options;
 		arguments[index] = options;
 	}
 	arguments[index] = NULL;
