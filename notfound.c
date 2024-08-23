@@ -26,7 +26,7 @@ int not_found(char **args, int counter)
 	return (127);
 }
 
-#include "shell.h"
+
 
 /**
  * print_numbers - Prints numbers, used to print the error message

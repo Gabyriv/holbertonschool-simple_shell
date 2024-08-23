@@ -12,7 +12,7 @@ int _path(char **args)
 	char *global_dup = NULL;
 	char *dir_path = NULL;
 	char *command_path = NULL;
-	char *test[121];
+	char *test_cph[121];
 	int exist_stat = -1, i = 0;
 
 	global_path = _getenv("PATH");
@@ -26,8 +26,8 @@ int _path(char **args)
 	while (exist_stat == -1 && dir_path != NULL)
 	{
 		command_path = extra_command(dir_path, args[0]);
-		test[i] = command_path;
-		exist_stat = exist(test[i]);
+		test_cph[i] = command_path;
+		exist_stat = exist(test_cph[i]);
 		dir_path = strtok(NULL, ":");
 		i++;
 	}
@@ -36,13 +36,13 @@ int _path(char **args)
 	free(global_dup);
 	if (exist_stat == 0)
 	{
-		args[0] = test[i];
+		args[0] = test_cph[i];
 		return (0);
 	}
 	else
 	{
-		if (i >= 0 && test[i] != NULL)
-			free(test[i]);
+		if (i >= 0 && test_cph[i] != NULL)
+			free(test_cph[i]);
 		return (-1);
 	}
 }

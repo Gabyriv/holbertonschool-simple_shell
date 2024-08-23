@@ -6,6 +6,7 @@
  * @size: Length ot the prompt
  * Return: 0 if success or -1 if fails
  */
+
 int _prompt(const char *prompt, unsigned int size)
 {
 	int nread;

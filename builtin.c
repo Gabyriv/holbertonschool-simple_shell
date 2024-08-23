@@ -15,7 +15,7 @@ int check_built(char **args, int exit_stat)
 	};
 	int i = 0;
 
-	while (1 < 2)
+	while (i < 2)
 	{
 		if (_strcmp(args[0], builtins[i]) == 0)
 			break;
@@ -32,7 +32,7 @@ int check_built(char **args, int exit_stat)
 	{
 		if (environ == NULL)
 			return (0);
-		write(1, environ, 1024);
+		write(1, environ, 1000);
 	}
 	return (0);
 }

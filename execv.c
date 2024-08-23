@@ -11,7 +11,7 @@ int exec(char **arguments)
 	pid_t pid = 0;
 	int stat = 0, exe_stat = 0;
 
-	pid  = fork();
+	pid = fork();
 	if (pid  == -1)
 		_prompt("Fail\n", 6);
 	else if (pid == 0)

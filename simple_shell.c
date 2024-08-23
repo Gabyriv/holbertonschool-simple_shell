@@ -9,10 +9,10 @@ int main(void)
 {
 	ssize_t bytes_read = 0;
 	size_t bf_size = 0;
-	char *entry = NULL, *arguments[1024];
+	char *entry = NULL, *arguments[20];
 	int counter = 1, vf_stat = 0, exist_stat = 0, exit_stat = 0, builtin_stat = 0;
 
-	_prompt("HELLO USER$", 11);
+	_prompt("HELLO USER$:", 12);
 	bytes_read = getline(&entry, &bf_size, stdin);
 	while (bytes_read != -1)
 	{
@@ -46,7 +46,7 @@ int main(void)
 		entry = NULL;
 		memset(arguments, 0, sizeof(arguments));
 		counter++;
-		_prompt("HELLO USER$ ", 11), bytes_read = getline(&entry, &bf_size, stdin);
+		_prompt("HELLO USER$:", 12), bytes_read = getline(&entry, &bf_size, stdin);
 	}
 	mem_free(entry);
 	return (exit_stat);

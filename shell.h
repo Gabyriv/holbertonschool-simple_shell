@@ -18,7 +18,7 @@ int exec(char **arguments);
 int exist(char *pathname);
 int _putchar(char c);
 int _prompt(const char *prompt, unsigned int size);
-int _strlen(const char *string);
+int _strlen(const char *str);
 char *_strdup(char *str);
 int _strcmp(char *str1, char *str2);
 int check_built(char **args, int exit_stat);
@@ -31,4 +31,5 @@ int get_args(char *entry, char **arguments);
 int print_numbers(int n);
 void free_grid(char **grid, int heigth);
 void execute_command(char **args, char *_path);
+
 #endif
