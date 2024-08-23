@@ -13,14 +13,14 @@ int exec(char **arguments)
 
 	pid  = fork();
 	if (pid  == -1)
-		perror("Fail\n");
+		_prompt("Fail\n", 6);
 	else if (pid == 0)
 	{
 		exe_stat = execve(arguments[0], arguments, environ);
 		if (exe_stat == -1)
 		{
 			exe_stat = 126;
-			perror("shell");
+			perror("son is dead");
 			exit(exe_stat);
 		}
 		exit (0);
